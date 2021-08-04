@@ -9,7 +9,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-app.use(express.static(path.join(__dirname, '../full')));
+app.use(express.static(path.join(__dirname, '../Full')));
 
 const botName = 'Chat Bot';
 
@@ -61,4 +61,4 @@ io.on('connection', socket => {
 
 const PORT = 3000 || process.env.PORT;
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
