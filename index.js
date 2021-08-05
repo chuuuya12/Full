@@ -3,13 +3,13 @@ const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
 
-var qs = require('qs');
-var assert = require('assert');
+const qs = require('qs');
+const assert = require('assert');
 
-var obj = qs.parse('a=c');
+const obj = qs.parse('a=c');
 assert.deepEqual(obj, { a: 'c' });
 
-var str = qs.stringify(obj);
+const str = qs.stringify(obj);
 assert.equal(str, 'a=c');
 
 
