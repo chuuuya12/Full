@@ -9,7 +9,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-app.use(express.static(path.join(__dirname, './utils/users')));
+app.use(express.static(path.join(__dirname, '../Full')));
 
 const botName = 'Chat Bot';
 
