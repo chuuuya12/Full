@@ -14,7 +14,14 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-
+const io = require("socket.io")(3000, {
+  path: "/test",
+  serveClient: false,
+  // below are engine.IO options
+  pingInterval: 10000,
+  pingTimeout: 5000,
+  cookie: false
+});
 
 // Set static folder
 app.use(express.static(path.join(__dirname)));
