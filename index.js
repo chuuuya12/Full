@@ -3,18 +3,10 @@ const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
 
-const url = require("url")
-const qs = require("querystring");   
-    function fn() {
-        const parsedUrl = url.parse(process.argv[2])
-        const query = qs.parse(parsedUrl.query);
-        console.log("query a is " + query["a"]);
-        console.log("query b is " + query["b"]);
-    }
-    module.exports.fn = fn();
+
 
 // Get username and room from URL
-const { username, room} = qs.parse(location.search, {
+const { username, room} = Qs.parse(location.search, {
     ignoreQueryPrefix: true
 });
 
