@@ -1,7 +1,11 @@
 const path = require('path');
 const http = require('http');
 const express = require('express');
-const socketio = require('socket.io')({cors:{origin: "*"},});
+const socketio = require('socket.io')(443, {
+    cors: {
+        origin: "*",
+    },
+})
 const formatMessage = require('./utils/messages');
 const {
   userJoin,
