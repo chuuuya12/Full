@@ -27,5 +27,15 @@
     "socket.io-client": "^4.1.3",
     "uuid": "^8.3.2",
     "webpack-config": "^7.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chuuuya12/Full.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/chuuuya12/Full/issues"
+  },
+  "homepage": "https://github.com/chuuuya12/Full#readme"
 }
