@@ -3,14 +3,6 @@ const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
 
-const qs = require('qs');
-const assert = require('assert');
-
-const obj = qs.parse('a=c');
-assert.deepEqual(obj, { a: 'c' });
-
-const str = qs.stringify(obj);
-assert.equal(str, 'a=c');
 
 
 // Get username and room from URL
