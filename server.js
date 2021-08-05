@@ -39,6 +39,10 @@ io.on('connection', socket => {
         formatMessage(botName, `${user.username} has joined`)
       );
 
+      socket.on('chat message', function(message){
+        io.emit('chat message', message);
+    });
+
     // Send users and room info
     io.to(user.room).emit('roomUsers', {
       room: user.room,
