@@ -10,6 +10,13 @@ const {
   getRoomUsers
 } = require('./utils/users');
 
+
+const socket = require("socket.io-client")("https://example.com");
+
+socket.on("connect_error", (err) => {
+  console.log(`connect_error due to ${err.message}`);
+});
+
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
