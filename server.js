@@ -10,6 +10,8 @@ const {
   getRoomUsers
 } = require('./utils/users');
 
+server.listen(8080);
+
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
