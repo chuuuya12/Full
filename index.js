@@ -66,3 +66,12 @@ function outputUsers(users) {
     ${users.map(user => `<li>${user.username}</li>`).join('')}
     `;
 }
+
+module.exports = {
+    userJoin,
+    getCurrentUser,
+    userLeave,
+    getRoomUsers,
+    chat,
+    index
+};
