@@ -1,4 +1,5 @@
 const path = require('path');
+const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
 const formatMessage = require('./utils/messages');
@@ -9,16 +10,8 @@ const {
   getRoomUsers
 } = require('./utils/users');
 
-
-var https = require('https');
-
-https.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.write('Hello World!');
-  res.end();
-}).listen(8080);
-
 const app = express();
+const server = http.createServer(app);
 const io = socketio(server);
 
 // Set static folder
