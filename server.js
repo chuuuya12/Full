@@ -19,9 +19,7 @@ app.use(express.static(path.join(__dirname)));
 
 const botName = 'Chat Bot';
 
-const socket = io({
-  reconnectionAttempts: 5 // defaults to Infinity
-});
+
 
 // Run when client connects
 io.on('connection', socket => {
