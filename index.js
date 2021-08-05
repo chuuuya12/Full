@@ -8,7 +8,7 @@ const { username, room } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
 
-const socket = io(':8080');
+const socket = io('https://chatnonymous-bot-deploy.herokuapp.com/');
 
 
 // Join chatroom
