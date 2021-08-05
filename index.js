@@ -10,6 +10,8 @@ const { username, room } = Qs.parse(location.search, {
 
 const socket = io(':8080');
 
+server.listen(8080);
+
 // Join chatroom
 socket.emit('joinRoom', { username, room });
 
