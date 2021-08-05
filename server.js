@@ -10,6 +10,7 @@ const {
   getRoomUsers
 } = require('./utils/users');
 
+const socket = io();
 
 const socket = require("socket.io-client")("https://example.com");
 
