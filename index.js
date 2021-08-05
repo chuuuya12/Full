@@ -67,11 +67,3 @@ function outputUsers(users) {
     `;
 }
 
-module.exports = {
-    userJoin,
-    getCurrentUser,
-    userLeave,
-    getRoomUsers,
-    chat,
-    index
-};
