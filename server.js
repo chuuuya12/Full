@@ -1,4 +1,5 @@
 const path = require('path');
+const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
 const formatMessage = require('./utils/messages');
@@ -9,7 +10,6 @@ const {
   getRoomUsers
 } = require('./utils/users');
 
-const socketUrl = '/'
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
