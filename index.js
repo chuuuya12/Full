@@ -9,7 +9,7 @@ const { username, room} = Qs.parse(location.search, {
 });
 
 
-const socket = io('https://chatnonymous-bot-deploy.herokuapp.com/');
+const socket = io('https://chatnonymous-bot-deploy.herokuapp.com/chat');
 
 // join Chat room
 
