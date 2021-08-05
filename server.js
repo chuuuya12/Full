@@ -11,7 +11,7 @@ const {
 } = require('./utils/users');
 
 const app = express();
-const server = https.createServer(app);
+const server = http.createServer(app);
 const io = socketio(server);
 
 // Set static folder
