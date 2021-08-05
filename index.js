@@ -8,7 +8,7 @@ const { username, room } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
 
-const socket = io('https://chatnonymous-bot-deploy.herokuapp.com/');
+const socket = io('/');
 
 // Join chatroom
 socket.emit('joinRoom', { username, room });
