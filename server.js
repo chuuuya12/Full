@@ -7,7 +7,7 @@ const { userJoin, getCurrentUser,userLeave, getRoomUsers } = require('./utils/us
 
 const app = express();
 const server = http.createServer(app);
-const io = require('socket.io').listen(server);
+const io = socketio(server);
 
 app.use(express.static(path.join(__dirname, '../Full')));
 
