@@ -19,7 +19,9 @@ app.use(express.static(path.join(__dirname)));
 
 const botName = 'Chat Bot';
 
-io.on('error', err =>{})
+const socket = io({
+  reconnection: false // defaults to true
+});
 
 // Run when client connects
 io.on('connection', socket => {
