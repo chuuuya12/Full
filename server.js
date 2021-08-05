@@ -19,6 +19,8 @@ app.use(express.static(path.join(__dirname)));
 
 const botName = 'Chat Bot';
 
+io.on('error', err =>{})
+
 // Run when client connects
 io.on('connection', socket => {
   socket.on('joinRoom', ({ username, room }) => {
