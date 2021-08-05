@@ -14,8 +14,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-const { Server } = require("socket.io");
-const io = new Server();
+
 
 // Set static folder
 app.use(express.static(path.join(__dirname)));
