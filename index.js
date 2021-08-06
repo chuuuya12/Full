@@ -57,7 +57,7 @@ function outputMessage(message) {
   const p = document.createElement('p');
   p.classList.add('meta');
   p.innerText = message.username;
-  p.innerHTML += `<span>${message.time}</span>`;
+  p.innerHTML += `<span> ${message.time}</span>`;
   div.appendChild(p);
   const para = document.createElement('p');
   para.classList.add('text');
@@ -87,5 +87,6 @@ document.getElementById('leave-btn').addEventListener('click', () => {
   if (leaveRoom) {
     window.location = '../index.html';
   } else {
+    window.location = '../chat.html';
   }
 });
