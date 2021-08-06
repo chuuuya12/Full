@@ -1,3 +1,43 @@
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import ColorPicker from "react-color-picker-text";
+import "./styles-2.css";
+ 
+class App extends Component {
+  onColorPickerInfoChange = color => {
+    console.log("Main Color Change", color);
+  };
+ 
+  render() {
+    // change the default design of the color picker
+    const styles = {
+      title: "Color Picker",
+      labelStyle: {
+        paddingBottom: "7px",
+        fontSize: "11px"
+      },
+      colorTextBoxStyle: {
+        height: "35px",
+        border: "none",
+        borderBottom: "1px solid lightgray",
+        paddingLeft: "35px"
+      }
+    };
+    return (
+      <ColorPicker
+        onColorChange={this.onColorPickerInfoChange}
+        title={styles.title}
+        labelStyle={styles.labelStyle}
+        colorTextBoxStyle={styles.colorTextBoxStyle}
+        pickerType={"Chrome"}
+        defaultColor={"#554"}
+      />
+    );
+  }
+}
+ 
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
