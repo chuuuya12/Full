@@ -108,13 +108,13 @@ function startup() {
 function updateFirst(event) {
   var meta = document.querySelector("p");
 
-  if (p) {
-    p.style.color = event.target.value;
+  if (username) {
+    username.style.color = event.target.value;
   }
 }
 
 function updateAll(event) {
-  document.querySelectorAll("p").forEach(function(p) {
-    p.style.color = event.target.value;
+  document.querySelectorAll("username").forEach(function(username) {
+    username.style.color = event.target.value;
   });
 }
