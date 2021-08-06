@@ -100,7 +100,6 @@ let colorPicker = document.getElementsByClassName("colorWell");
 let box = document.getElementsByClassName("message");
 let output = document.getElementsByClassName("text");
 
-message.style.borderColor = colorWell.value;
 
 colorWell.addEventListener("input", function(event) {
   message.style.borderColor = event.target.value;
