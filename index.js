@@ -96,25 +96,16 @@ document.getElementById('leave-btn').addEventListener('click', () => {
 var colorWell;
 var defaultColor = "#0000ff";
 
-window.addEventListener("load", startup, false);
+let colorPicker = document.getElementsByClassName("colorWell");
+let box = document.getElementsByClassName("message");
+let output = document.getElementsByClassName("text");
 
-function startup() {
-  colorWell = document.querySelector("#colorWell");
-  colorWell.value = defaultColor;
-  colorWell.addEventListener("input", updateFirst, false);
-  colorWell.addEventListener("change", updateAll, false);
-  colorWell.select();
-}
-function updateFirst(event) {
-  var meta = document.querySelector("p");
+message.style.borderColor = colorWell.value;
 
-  if (p) {
-    p.style.color = event.target.value;
-  }
-}
+colorWell.addEventListener("input", function(event) {
+  message.style.borderColor = event.target.value;
+}, false);
 
-function updateAll(event) {
-  document.querySelectorAll("p").forEach(function(p) {
-    p.style.color = event.target.value;
-  });
-}
+colorWell.addEventListener("change", function(event) {
+  text.innerText = "Color set to " + colorWell.value + ".";
+}, false);
