@@ -106,15 +106,15 @@ function startup() {
   colorWell.select();
 }
 function updateFirst(event) {
-  var message = document.querySelector("message");
+  var meta = document.querySelector("p");
 
-  if (message) {
-    message.style.color = event.target.value;
+  if (p) {
+    p.style.color = event.target.value;
   }
 }
 
 function updateAll(event) {
   document.querySelectorAll("p").forEach(function(p) {
-    message.style.color = event.target.value;
+    p.style.color = event.target.value;
   });
 }
