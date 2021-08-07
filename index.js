@@ -128,15 +128,15 @@ function startup() {
   colorWell.select();
 }
 function updateFirst(event) {
-  var meta = document.querySelector("user.username");
+  var meta = document.querySelector("p");
 
-  if (user.username) {
-    user.username.style.color = event.target.value;
+  if (p) {
+    p.style.color = event.target.value;
   }
 }
 
 function updateAll(event) {
-  document.querySelectorAll("user.username").forEach(function(p) {
-    user.username.style.color = event.target.value;
+  document.querySelectorAll("p").forEach(function(p) {
+    p.style.color = event.target.value;
   });
 }
