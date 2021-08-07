@@ -4,7 +4,7 @@ const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
 
 // Get username and room from URL
-const { username, room } = Qs.parse(location.search, {
+const { username, room ,ucolor} = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
 
@@ -12,7 +12,7 @@ const socket = io('https://chatnonymous-bot-deploy.herokuapp.com/');
 
 
 // Join chatroom
-socket.emit('joinRoom', { username, room });
+socket.emit('joinRoom', { username, room,ucolor });
 
 // Get room and users
 socket.on('roomUsers', ({ room, users }) => {
@@ -57,6 +57,7 @@ function outputMessage(message) {
   const p = document.createElement('p');
   p.classList.add('meta');
   p.innerText = message.username;
+    p.style=`color: ${message.ucolor}`
   p.innerHTML += `<span> ${message.time}</span>`;
   div.appendChild(p);
   const para = document.createElement('p');
