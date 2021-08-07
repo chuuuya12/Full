@@ -104,6 +104,9 @@ a {
 	border-radius: 5px;
 	overflow-wrap: break-word;
 }
+#color {
+	margin: 10px;
+}
 
 .chat-messages .message .meta {
 	font-size: 15px;
