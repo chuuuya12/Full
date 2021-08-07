@@ -30,14 +30,15 @@ io.on('connection', socket => {
     socket.join(user.room);
 
     // Welcome current user
-    socket.emit('message', formatMessage(botName,"#000000", 'Welcome!'));
+    socket.emit('message', formatMessage(botName,'#000000', 'Welcome!'));
+
 
     // Broadcast when a user connects
     socket.broadcast
       .to(user.room)
       .emit(
         'message',
-        formatMessage(botName,"#000000", `${user.username} has joined`)
+        formatMessage(botName,'#000000', `${user.username} has joined`)
       );
 
       
@@ -63,7 +64,7 @@ io.on('connection', socket => {
     if (user) {
       io.to(user.room).emit(
         'message',
-        formatMessage(botName, "#000000",`${user.username} has left`)
+        formatMessage(botName, '#000000',`${user.username} has left`)
       );
 
       // Send users and room info
