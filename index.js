@@ -4,7 +4,7 @@ const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
 
 // Get username and room from URL
-const { username, room ,ucolor} = Qs.parse(location.search, {
+const { username, room,ucolor } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
 
@@ -12,7 +12,7 @@ const socket = io('https://chatnonymous-bot-deploy.herokuapp.com/');
 
 
 // Join chatroom
-socket.emit('joinRoom', { username, room,ucolor });
+socket.emit('joinRoom', { username, room, ucolor });
 
 // Get room and users
 socket.on('roomUsers', ({ room, users }) => {
@@ -57,7 +57,7 @@ function outputMessage(message) {
   const p = document.createElement('p');
   p.classList.add('meta');
   p.innerText = message.username;
-    p.style=`color: ${message.ucolor}`
+  p.style=`color: ${message.ucolor}`
   p.innerHTML += `<span> ${message.time}</span>`;
   div.appendChild(p);
   const para = document.createElement('p');
@@ -93,51 +93,6 @@ document.getElementById('leave-btn').addEventListener('click', () => {
 });
 
 
-// User is typing 
-const typing = false;
-const timeout = undefined;
-
-function timeoutFunction(){
-  typing = false;
-  socket.emit(noLongerTypingMessage);
-}
-
-function onKeyDownNotEnter(){
-  if(typing == false) {
-    typing = true
-    socket.emit(typingMessage);
-    timeout = setTimeout(timeoutFunction, 5000);
-  } else {
-    clearTimeout(timeout);
-    timeout = setTimeout(timeoutFunction, 5000);
-  }
-
-}
 
 
-// Color pcker
-var colorWell;
-var defaultColor = "#0000ff";
 
-window.addEventListener("load", startup, false);
-
-function startup() {
-  colorWell = document.querySelector("#colorWell");
-  colorWell.value = defaultColor;
-  colorWell.addEventListener("input", updateFirst, false);
-  colorWell.addEventListener("change", updateAll, false);
-  colorWell.select();
-}
-function updateFirst(event) {
-  var meta = document.querySelector("p");
-
-  if (p) {
-    p.style.color = event.target.value;
-  }
-}
-
-function updateAll(event) {
-  document.querySelectorAll("p").forEach(function(p) {
-    p.style.color = event.target.value;
-  });
-}
