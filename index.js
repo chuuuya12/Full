@@ -92,6 +92,28 @@ document.getElementById('leave-btn').addEventListener('click', () => {
 });
 
 
+// User is typing 
+const typing = false;
+const timeout = undefined;
+
+function timeoutFunction(){
+  typing = false;
+  socket.emit(noLongerTypingMessage);
+}
+
+function onKeyDownNotEnter(){
+  if(typing == false) {
+    typing = true
+    socket.emit(typingMessage);
+    timeout = setTimeout(timeoutFunction, 5000);
+  } else {
+    clearTimeout(timeout);
+    timeout = setTimeout(timeoutFunction, 5000);
+  }
+
+}
+
+
 // Color pcker
 var colorWell;
 var defaultColor = "#0000ff";
