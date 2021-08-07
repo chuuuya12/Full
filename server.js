@@ -32,7 +32,6 @@ io.on('connection', socket => {
     // Welcome current user
     socket.emit('message', formatMessage(botName,'#000000', 'Welcome!'));
 
-
     // Broadcast when a user connects
     socket.broadcast
       .to(user.room)
