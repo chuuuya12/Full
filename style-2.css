@@ -48,6 +48,26 @@ a {
 	box-shadow: 0 0 5px #03E9F4, 0 0 25px #03E9F4, 0 0 50px #03E9F4, 0 0 200px #03E9F4;
 	color: #f3f3f3;
 }
+#leave-btn {
+	background-color: black;
+	color: #f40303;
+	border: none;
+	display: inline-block;
+	font-size: 14px;
+	letter-spacing: 4px;
+	padding: 14px;
+	overflow: hidden;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.5s;
+	cursor: pointer;
+}
+#leave-btn:hover, #leave-btn:focus {
+	background: #f40303;
+	box-shadow: 0 0 5px #f54646, 0 0 25px #fb3737, 0 0 50px #ff7272, 0 0 200px #fa7e7e;
+	color: #f3f3f3;
+}
+
 
 /* Chat Page */
 
