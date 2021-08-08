@@ -76,6 +76,7 @@ a {
 	margin: 30px auto;
 	overflow: hidden;
 	border-radius: 15px;
+	box-shadow: 1px 1px 50px 5px black;
 	-webkit-box-reflect: below 1px;
 	-webkit-box-reflect: below 9px linear-gradient(transparent, #0005);	
 }
