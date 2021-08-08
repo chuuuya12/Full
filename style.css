@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 :root {
-	--dark-color-a: #250747;
-	--dark-color-b: #391380;
+	--dark-color-a: #201f22;
+	--dark-color-b: #3b3b3b;
 	--light-color: #650377;
 	--success-color: #a566be;
 	--error-color: #df77df;
@@ -17,7 +17,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
-	background: var(--light-color);
+	background-color: rgb(20, 20, 20);
 	margin: 20px;
 	color: rgb(255, 255, 255);
 }
@@ -31,15 +31,26 @@ a {
 }
 
 .btn {
+	background-color: black;
+	color: #03E9F4;
+	border: none;
+	display: inline-block;
+	font-size: 24px;
+	letter-spacing: 4px;
+	padding: 24px 30px;
+	overflow: hidden;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.5s;
+	-webkit-box-reflect: below 1px;
+	-webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 	cursor: pointer;
-	padding: 5px 15px;
-	background: var(--light-color);
-	color: var(--dark-color-a);
-	border: 0;
-	font-size: 17px;
 }
-.btn:hover {
-	background-color: #9b4ea8;
+.btn:hover, .btn:focus
+ {
+	background: #03E9F4;
+	box-shadow: 0 0 5px #03E9F4, 0 0 25px #03E9F4, 0 0 50px #03E9F4, 0 0 200px #03E9F4;
+	color: #f3f3f3;
 }
 
 /* Chat Page */
@@ -119,7 +130,9 @@ a {
 .chat-messages .message .meta span {
 	color: rgb(180, 180, 180);
 }
-
+#username {
+	outline: none;
+}
 .chat-form-container {
 	padding: 20px 30px;
 	background-color: var(--dark-color-a);
@@ -135,6 +148,10 @@ a {
 	height: 40px;
 	flex: 1;
 	background-color: rgb(240, 218, 253);
+}
+#room {
+	outline: none;
+	margin: 5px auto 5px;
 }
 
 /* Join Page */
@@ -155,6 +172,7 @@ a {
 .join-main {
 	padding: 30px 40px;
 	background: var(--dark-color-b);
+	box-shadow: 0 0 5px rgb(41, 41, 41), 0 0 5px rgb(47, 47, 47), 0 0 5px rgb(47, 47, 47);	
 }
 
 .join-main p {
