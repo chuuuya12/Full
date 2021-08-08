@@ -42,8 +42,6 @@ a {
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: 0.5s;
-	-webkit-box-reflect: below 1px;
-	-webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 	cursor: pointer;
 }
 .btn:hover, .btn:focus
@@ -172,7 +170,8 @@ a {
 .join-main {
 	padding: 30px 40px;
 	background: var(--dark-color-b);
-	box-shadow: 0 0 5px rgb(41, 41, 41), 0 0 5px rgb(47, 47, 47), 0 0 5px rgb(47, 47, 47);	
+	-webkit-box-reflect: below 1px;
+	-webkit-box-reflect: below 1px linear-gradient(transparent, #0005);	
 }
 
 .join-main p {
