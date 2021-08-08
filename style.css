@@ -148,22 +148,7 @@ a {
 	border-radius: 20px;
 	border-color: transparent;
 }
-.chat-form-container {
-	padding: 20px 30px;
-	background-color: var(--dark-color-a);
-}
 
-.chat-form-container form {
-	display: flex;
-}
-
-.chat-form-container input[type='text'] {
-	font-size: 16px;
-	padding: 5px;
-	height: 40px;
-	flex: 1;
-	background-color: rgb(240, 218, 253);
-}
 #room {
 	border: none;
 	border-left: 5px solid;
@@ -196,9 +181,8 @@ a {
 .join-header {
 	text-align: center;
 	padding: 20px;
-	background: rgb(43,43,43);
-	background: radial-gradient(circle, rgba(43,43,43,1) 0%, rgba(31,31,31,1) 50%, rgba(0,0,0,1) 100%);
-	border-top-right-radius: 5px;
+	background: rgb(0,0,0);
+	background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(32,32,32,1) 66%, rgba(60,60,60,1) 100%);
 }
 
 .join-main {
