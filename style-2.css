@@ -132,7 +132,7 @@ a {
 	margin-bottom: 15px;
 	border-radius: 15px;
 	overflow-wrap: break-word;
-	background: black;
+	background: rgba(90, 90, 90, 0.883);
 }
 
 .chat-messages .message .meta {
