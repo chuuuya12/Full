@@ -132,6 +132,7 @@ a {
 	margin-bottom: 15px;
 	border-radius: 15px;
 	overflow-wrap: break-word;
+	background: black;
 }
 
 .chat-messages .message .meta {
