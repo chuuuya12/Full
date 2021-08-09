@@ -37,13 +37,22 @@
 					<div class="form-control">
 						<label for="room">Create a Room</label>
 						<input type="text" name="room" id="room" placeholder="Your room name" required>
+						<form id="form_kumes">
 						<label for="character">Select a character:</label>
-						<select name="character" id="character" required>
-							<option value="char-1">char-1</option>
-							<option value="char-2">char-2</option>
-							<option value="char-3">char-3</option>
-							<option value="char-4">char-4</option>
+						<select name="character" id="character" required><optgroup label="Characters">
+							<option value="none/other">none/other</option>
+							<optgroup label="Characters"></optgroup>
+							<option value="s_266">Issei Hyoudou</option>
+							<option value="s_267">Koneko Toujou</option>
+							<option value="s_268">Rossweisse</option>
+							<option value="char-4">Spongebob Squarepants</option>
+						</optgroup>
 						</select>
+						<p id="text_preview_container">
+							<span id="text_preview_acronym"></span>
+							<span id="text_preview"></span>
+						</p>
+					</form>
 					<button type="submit" class="btn">Join Chat</button>
 				</form>
 			</main>
