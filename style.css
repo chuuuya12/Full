@@ -251,7 +251,27 @@ option {
     margin-top: 0px;
 }
 
+.text-container > h1 {
+	text-transform: uppercase;
+	font-size: 35px;
+	animation: glow 2s ease-in-out infinite;
+  }
 
+  @keyframes glow {
+	0%, 100% {
+	  color: rgb(255, 255, 255);
+	  text-shadow: 0 0 5px #f403c0, 0 0 25px #f403cc, 0 0 50px #f403d4, 0 0 200px #e003f4;
+	}
+	50%, 100% {
+		color: rgb(148, 148, 148);
+		text-shadow: none;
+	  }
+	}
+	.join-header {
+		animation-delay: 1.26s;
+	}
+	
+	
 @media (max-width: 700px) {
 	.chat-main {
 		display: block;
