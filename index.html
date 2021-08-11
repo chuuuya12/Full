@@ -11,6 +11,10 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="style.css" />
+		<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
 		<title>The Muse Site</title>
 	</head>
 	<body>
@@ -30,31 +34,48 @@
 							placeholder="Enter your name..."
 							required
 						/>
-					<div class="form-control" id="color">
 						<label for="ucolor">Color:</label>
-						<input name="ucolor" type="color">
-						</div>
+					<div class="form-control" id="color">
+						<input name="ucolor" type="color" id="clr">
+						<input type="text" pattern="[A-Fa-f\d]{6}" id="color_hex_input" name="color_hex" size="6" maxlength="6" required="" value="000000">
+					</div>
 					</div>
 					<div class="form-control">
 						<label for="room">Create a Room</label>
 						<input type="text" name="room" id="room" placeholder="Your room name" required>
 						<label for="character">Select a character:</label>
-						<select id="character" onchange="getSelectValue();" required>
-							<option value="none/other">none/other</option>
+						<select id="character" onchange="myFunction()">
+							<option value="">none/other</option>
 							<optgroup label="characters"></optgroup>
 							<option value="char-1">Issei Hyoudou</option>
 							<option value="char-2">Koneko Toujou</option>
 							<option value="char-3">Rossweisse</option>
-							<option value="char-4">Spongebob Squarepants</option>
+							<option value="I'm ready!">Spongebob Squarepants</option>
 						</optgroup>
 						</select>
 						<p id="text_preview_container">
-							<span id="text_preview_acronym"></span>
-							<span id="text_preview"></span>
 						</p>
 					<button type="submit" class="btn">Join Chat</button>
 				</form>
 			</main>
 		</div>
+		<script>
+			function myFunction() {
+  var x = document.getElementById("character").value;
+  document.getElementById("text_preview_container").innerHTML = "" + x;
+		}
+
+				// Color and color_hex
+				var clr = $("input[name=color]").change(function() {
+			color_hex_input.val(this.value.substr(1));
+		});
+		var color_hex_input = $("#color_hex_input").keyup(function() {
+			if (this.value.length == 6) {
+				clr.val("#" + this.value);
+				clr.spectrum("set", "#" + this.value);
+				text_preview_container.css("color", "#" + this.value);
+			}
+		});
+		</script>
 	</body>
 </html>

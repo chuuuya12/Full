@@ -60,7 +60,7 @@ function outputMessage(message) {
   const p = document.createElement('p');
   p.classList.add('meta');
   p.innerText = message.username;
-    p.style=`color: ${message.ucolor}`
+  p.style=`color: ${message.ucolor}`
   p.innerHTML += `<span> ${message.time}</span>`;
   div.appendChild(p);
   const para = document.createElement('p');
@@ -94,8 +94,5 @@ document.getElementById('leave-btn').addEventListener('click', () => {
     window.location = '../chat.html';
   }
 });
-
-
-
 
 
