@@ -36,8 +36,13 @@
 						/>
 						<label for="ucolor">Color:</label>
 					<div class="form-control" id="color">
-						<input name="ucolor" type="color" id="clr">
-						<input type="text" pattern="[A-Fa-f\d]{6}" id="color_hex_input" name="color_hex" size="6" maxlength="6" required="" value="000000">
+						<span class="color-picker">
+							<label for="colorPicker">
+							  <input type="color" value="#1DB8CE" name="ucolor" type="color" id="colorPicker">
+							</label>
+						  </span>
+						  
+						  
 					</div>
 					</div>
 					<div class="form-control">
@@ -66,16 +71,19 @@
 		}
 
 				// Color and color_hex
-				var clr = $("input[name=color]").change(function() {
-			color_hex_input.val(this.value.substr(1));
-		});
-		var color_hex_input = $("#color_hex_input").keyup(function() {
-			if (this.value.length == 6) {
-				clr.val("#" + this.value);
-				clr.spectrum("set", "#" + this.value);
-				text_preview_container.css("color", "#" + this.value);
-			}
-		});
+				document.querySelectorAll('input[type=color]').forEach(function(picker) {
+
+var targetLabel = document.querySelector('label[for="' + picker.id + '"]'),
+  codeArea = document.createElement('span');
+
+codeArea.innerHTML = picker.value;
+targetLabel.appendChild(codeArea);
+
+picker.addEventListener('change', function() {
+  codeArea.innerHTML = picker.value;
+  targetLabel.appendChild(codeArea);
+});
+});
 		</script>
 	</body>
 </html>
