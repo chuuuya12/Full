@@ -44,11 +44,19 @@
 						<label for="character">Select a character:</label>
 						<select id="character" onchange="myFunction()">
 							<option value="">none/other</option>
-							<optgroup label="characters"></optgroup>
-							<option value="BOOST BOOST">Issei Hyoudou</option>
-							<option value="I'M A CUTE GIRL">Koneko Toujou</option>
-							<option value="I'M ALSO A CUTE GIRL">Rossweisse</option>
-							<option value="I'm ready!">Spongebob Squarepants</option>
+							<optgroup label="Attack On Titan"></optgroup>
+							<option value="TATAKAE">Eren Jaeger</option>
+							<option value="TATAKAE">Mikasa Ackerman</option>
+							<option value="TATAKAE">Armin Arlelt</option>
+							<option value="TATAKAE">Zeke Jaeger</option>
+							<option value="TATAKAE">Levi Ackerman</option>
+							<option value="TATAKAE">Eren Jaeger</option>
+							<option value="TATAKAE">Eren Jaeger</option>
+							<optgroup label="Kono Subarashii Sekai ni Shukufuku o!"></optgroup>
+							<option value="Hai Kazuma desu">Satou Kazuma</option>
+							<option value="Purification!">Aqua</option>
+							<option value="Lalatina">Darkness</option>
+							<option value="I want to have Kazuma-san’s children">Yunyun</option>
 						</optgroup>
 						</select>
 						<p id="text_preview_container">
@@ -58,11 +66,13 @@
 			</main>
 		</div>
 		<script>
+			// Drop down select menu
 			function myFunction() {
   var x = document.getElementById("character").value;
   document.getElementById("text_preview_container").innerHTML = "" + x;
 		}
 
+		// Color Picker
 		$('#colorPicker').on('input', function() {
 	$('#hexcolor').val(this.value);
 });
