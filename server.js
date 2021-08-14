@@ -24,8 +24,8 @@ const botName = 'Chat Bot';
 
 // Run when client connects
 io.on('connection', socket => {
-  socket.on('joinRoom', ({ username, character, ucolor, room }) => {
-    const user = userJoin(socket.id, character, ucolor, username, room);
+  socket.on('joinRoom', ({ username,ucolor, room }) => {
+    const user = userJoin(socket.id,ucolor, username, room);
 
     socket.join(user.room);
 
@@ -53,7 +53,7 @@ io.on('connection', socket => {
   socket.on('chatMessage', msg => {
     const user = getCurrentUser(socket.id);
 
-    io.to(user.room).emit('message', formatMessage(user.username,user.character,user.ucolor, msg));
+    io.to(user.room).emit('message', formatMessage(user.username,user.ucolor, msg));
   });
 
   // Runs when client disconnects
