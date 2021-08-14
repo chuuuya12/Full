@@ -42,7 +42,7 @@
 						<label for="room">Create a Room</label>
 						<input type="text" name="room" id="room" placeholder="Your room name" required>
 						<label for="character">Select a character:</label>
-						<select id="character" onchange="myFunction()">
+						<select id="character" name="character" onchange="myFunction()">
 							<option value="">none/other</option>
 							<optgroup label="Bungo Stray Dogs"></optgroup>
 							<option value="My entire life has been cursed.">Atsushi Nakajima</option>
@@ -76,6 +76,15 @@
 						</select>
 						<p id="text_preview_container">
 						</p>
+						<div class="ctg">
+							<h2 id="categs">Categories</h2>
+						<label for="anime-manga">Anime/Manga</label>
+						<input type="checkbox" name="anime-manga" id="anime-manga">
+						<label for="dc-comics">DC Comics</label>
+						<input type="checkbox" name="dc-comics" id="dc-comics">
+						<label for="mv-comics">Marvel</label>
+						<input type="checkbox" name="mv-comics" id="mv-comics">
+						</div>
 					<button type="submit" class="btn">Join Chat</button>
 				</form>
 			</main>

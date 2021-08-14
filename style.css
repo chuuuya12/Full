@@ -292,6 +292,10 @@ select {
     border-radius: 2px;
     margin-top: 0px;
 }
+#categs {
+	margin: 5px auto 8px;
+	text-decoration: underline;
+}
 
 .text-container > h1 {
 	font-family: 'Courgette', cursive;
