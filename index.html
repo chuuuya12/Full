@@ -46,12 +46,18 @@
 							<option value="">none/other</option>
 							<optgroup label="Attack On Titan"></optgroup>
 							<option value="TATAKAE">Eren Jaeger</option>
-							<option value="TATAKAE">Mikasa Ackerman</option>
-							<option value="TATAKAE">Armin Arlelt</option>
+							<option value="Ereh">Mikasa Ackerman</option>
+							<option value="So this is the view that you saw Bertolt.">Armin Arlelt</option>
 							<option value="TATAKAE">Zeke Jaeger</option>
-							<option value="TATAKAE">Levi Ackerman</option>
-							<option value="TATAKAE">Eren Jaeger</option>
-							<option value="TATAKAE">Eren Jaeger</option>
+							<option value="Give up on your dreams and die.">Levi Ackerman</option>
+							<option value="Just kill me!">Reiner Braun</option>
+							<option value="It's Bertholdt guys wtf">Bertholdt Hoover</option>
+							<option value=""></option>
+							<option value=""></option>
+							<option value=""></option>
+							<option value=""></option>
+							<option value=""></option>
+							<option value=""></option>
 							<optgroup label="Kono Subarashii Sekai ni Shukufuku o!"></optgroup>
 							<option value="Hai Kazuma desu">Satou Kazuma</option>
 							<option value="Purification!">Aqua</option>
@@ -71,6 +77,24 @@
   var x = document.getElementById("character").value;
   document.getElementById("text_preview_container").innerHTML = "" + x;
 		}
+		var character;
+var defaultColor = "#0000ff";
+
+window.addEventListener("load", startup, false);
+
+function startup() {
+  colorWell = document.querySelector("#colorPicker");
+  colorWell.value = defaultColor;
+  colorWell.addEventListener("input", updateFirst, false);
+  colorWell.select();
+}
+function updateFirst(event) {
+  var p = document.querySelector("p");
+
+  if (p) {
+    p.style.color = event.target.value;
+  }
+}
 
 		// Color Picker
 		$('#colorPicker').on('input', function() {
