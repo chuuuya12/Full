@@ -293,9 +293,15 @@ select {
     margin-top: 0px;
 }
 #categs {
-	margin: 5px auto 8px;
+	margin: 5px auto 10px;
 	text-decoration: underline;
 }
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 
 .text-container > h1 {
 	font-family: 'Courgette', cursive;

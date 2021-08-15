@@ -42,73 +42,74 @@
 						<label for="room">Create a Room</label>
 						<input type="text" name="room" id="room" placeholder="Your room name" required>
 						<label for="character">Select a character:</label>
-						<select id="character" name="character" onchange="myFunction()">
+						<select id="character" name="character" onchange="myFunction()" onselect="copyTextValue()">
 							<option value="">none/other</option>
 							<optgroup label="One Piece"></optgroup>
-							<option value="">Monkey D. Luffy</option>
-							<option value="">Roronoa Zoro</option>
-							<option value="">Nami</option>
-							<option value="">Usopp</option>
-							<option value="">Vinsmoke Sanji</option>
-							<option value="">Tony Tony Chopper</option>
-							<option value="">Nico Robin</option>
-							<option value="">Franky</option>
-							<option value="">Brook</option>
-							<option value="">Jinbe</option>
-							<option value="">Shanks</option>
-							<option value="">Portgas D. Ace</option>
-							<option value="">Sabo</option>
-							<option value="">Boa Hancock</option>
-							<option value="">Big Mom</option>
-							<option value="">Kaido</option>
-							<option value="">Black Beard</option>
+							<option value="Monkey D. Luffy">Monkey D. Luffy</option>
+							<option value="Roronoa Zoro">Roronoa Zoro</option>
+							<option value="Nami">Nami</option>
+							<option value="Usopp">Usopp</option>
+							<option value="Vinsmoke Sanji">Vinsmoke Sanji</option>
+							<option value="Tony Tony Chopper">Tony Tony Chopper</option>
+							<option value="Nico Robin">Nico Robin</option>
+							<option value="Franky">Franky</option>
+							<option value="Brook">Brook</option>
+							<option value="Jinbe">Jinbe</option>
+							<option value="Shanks">Shanks</option>
+							<option value="Portgas D. Ace">Portgas D. Ace</option>
+							<option value="Sabo">Sabo</option>
+							<option value="Boa Hancock">Boa Hancock</option>
+							<option value="Big Mom">Big Mom</option>
+							<option value="Kaido">Kaido</option>
+							<option value="Black Beard">Black Beard</option>
 							<optgroup label="Jujutsu Kaisen"></optgroup>
-							<option value="">Yuji Itadori</option>
-							<option value="">Satoru Gojo</option>
-							<option value="">Megumi Fushiguro</option>
-							<option value="">Nobara Kugisaki</option>
-							<option value="">Toge Inumaki</option>
-							<option value="">Aoi Todo</option>
-							<option value="">Sukuna</option>
-							<option value="">Maki Zenin</option>
-							<option value="">Kasumi Miwa</option>
-							<option value="">Kento Nanami</option>
-							<option value="">Mahito</option>
-							<option value="">Panda</option>
+							<option value="Yuji Itadori">Yuji Itadori</option>
+							<option value="Satoru Gojo">Satoru Gojo</option>
+							<option value="Megumi Fushiguro">Megumi Fushiguro</option>
+							<option value="Nobara Kugisaki">Nobara Kugisaki</option>
+							<option value="Toge Inumaki">Toge Inumaki</option>
+							<option value="Aoi Todo">Aoi Todo</option>
+							<option value="Sukuna">Sukuna</option>
+							<option value="Maki Zenin">Maki Zenin</option>
+							<option value="Kasumi Miwa">Kasumi Miwa</option>
+							<option value="Kento Nanami">Kento Nanami</option>
+							<option value="Mahito">Mahito</option>
+							<option value="Panda">Panda</option>
 							<optgroup label="Bungo Stray Dogs"></optgroup>
-							<option value="My entire life has been cursed.">Atsushi Nakajima</option>
-							<option value="Would you like to commit a double-suicide?">Osamu Dazai</option>
-							<option value="Shut up.">Chūya Nakahara</option>
-							<option value="The weak will die. Die, and make way for others">Ryūnosuke Akutagawa</option>
-							<option value="Even if the path I seek is a parched desert of thirst and suffering, I will continue to seek my ideals!">Doppo Kunikida</option>
-							<option value="You think death lies in the apex of science?">Akiko Yosano</option>
+							<option value="Atsushi Nakajima">Atsushi Nakajima</option>
+							<option value="Osamu Dazai">Osamu Dazai</option>
+							<option value="Chūya Nakahara">Chūya Nakahara</option>
+							<option value="Ryūnosuke Akutagawa">Ryūnosuke Akutagawa</option>
+							<option value="Doppo Kunikida!">Doppo Kunikida</option>
+							<option value="Akiko Yosano">Akiko Yosano</option>
 							<option value="Demon Snow">Kyōka Izumi</option>
-							<option value="I'm invincible.">Ranpo Edogawa</option>
+							<option value="Ranpo Edogawa">Ranpo Edogawa</option>
 							<optgroup label="Attack On Titan"></optgroup>
-							<option value="TATAKAE">Eren Jaeger</option>
-							<option value="Ereh">Mikasa Ackerman</option>
-							<option value="So this is the view that you saw Bertolt.">Armin Arlelt</option>
-							<option value="What's more, if we hadn't been born, we wouldn't have had to suffer!">Zeke Jaeger</option>
-							<option value="Give up on your dreams and die.">Levi Ackerman</option>
-							<option value="Just kill me!">Reiner Braun</option>
-							<option value="It's Bertholdt guys wtf">Bertholdt Hoover</option>
-							<option value="I don't trust Marley. But I do trust the comrades I've fought alongside.">Pieck</option>
-							<option value="I'm a horse">Jean Kirschtein</option>
-							<option value="I'll kill them all!">Gabi Braun</option>
-							<option value="	I love potatoes">Sasha Braus</option>
-							<option value="Eren, you perv!">Hange Zoë</option>
-							<option value="SHINZOU SASAGEYO!">Erwin Smith</option>
+							<option value="Eren Jaeger">Eren Jaeger</option>
+							<option value="Mikasa Ackerman">Mikasa Ackerman</option>
+							<option value="Armin Arlelt">Armin Arlelt</option>
+							<option value="Zeke Jaeger">Zeke Jaeger</option>
+							<option value="Levi Ackerman">Levi Ackerman</option>
+							<option value="Reiner Braun">Reiner Braun</option>
+							<option value="Bertholdt Hoover">Bertholdt Hoover</option>
+							<option value="Pieck">Pieck</option>
+							<option value="Jean Kirschtein">Jean Kirschtein</option>
+							<option value="Gabi Braun">Gabi Braun</option>
+							<option value="Sasha Braus">Sasha Braus</option>
+							<option value="Hange Zoë">Hange Zoë</option>
+							<option value="Erwin Smith">Erwin Smith</option>
 							<optgroup label="Kono Subarashii Sekai ni Shukufuku o!"></optgroup>
-							<option value="Hai Kazuma desu">Satou Kazuma</option>
-							<option value="Purification!">Aqua</option>
-							<option value="Lalatina">Darkness</option>
-							<option value="I want to have Kazuma-san’s children">Yunyun</option>
+							<option value="Satou Kazuma">Satou Kazuma</option>
+							<option value="Aqua">Aqua</option>
+							<option value="Darkness">Darkness</option>
+							<option value="Yunyun">Yunyun</option>
 						</optgroup>
 						</select>
 						<p id="text_preview_container">
 						</p>
 						<div class="ctg">
 							<h2 id="categs">Categories</h2>
+							<div class="container">
 						<label for="anime-manga">Anime/Manga</label>
 						<input type="checkbox" name="anime-manga" id="anime-manga">
 						<label for="dc-comics">DC Comics</label>
@@ -117,6 +118,7 @@
 						<input type="checkbox" name="mv-comics" id="mv-comics">
 						<label for="games">Game Characters</label>
 						<input type="checkbox" name="games" id="games">
+					</div>
 						</div>
 					<button type="submit" class="btn">Join Chat</button>
 				</form>
@@ -127,6 +129,10 @@
 			function myFunction() {
   var x = document.getElementById("character").value;
   document.getElementById("text_preview_container").innerHTML = "" + x;
+
+  var e = document.getElementById("character");
+    var val = e.options[e.selectedIndex].value;
+    document.getElementById("username").value = val;
 		}
 
 
