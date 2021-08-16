@@ -289,7 +289,9 @@ padding: 0;
 [id="1"]:not(:checked) ~ select > [label ="Attack On Titan"],
 [id="1"]:not(:checked) ~ select > [label ="Kono Subarashii Sekai ni Shukufuku o!"],
 [id="2"]:not(:checked) ~ select > [label="DC Comics"],
-[id="3"]:not(:checked) ~ select > [label="Marvel"]{ display: none; }
+[id="3"]:not(:checked) ~ select > [label="Marvel"],
+[id="4"]:not(:checked) ~ select > [label="League Of Legends"]
+[id="4"]:not(:checked) ~ select > [label="Valorant"]{ display: none; }
 
 select {
 	background:#dbdbdb;
