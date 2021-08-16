@@ -269,8 +269,12 @@ padding: 0;
 	width: 100%;
 }
 .characts {
+	padding-top: 10px;
 	margin: 7px auto;
 
+}
+.label {
+	margin: 20px auto;
 }
 select {
 	background:#dbdbdb;
