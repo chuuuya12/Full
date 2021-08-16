@@ -314,13 +314,7 @@ $('#hexcolor').on('input', function() {
 });
 
 // Disable when picking a character
-$('#character').change(function() {
-    if( $(this).val() == '') {
-        $('#username').prop( "disabled", false );
-    } else {       
-        $('#username').prop( "disabled", true );
-    }
-});
+
 
 $('#character').change(function() {
     if( $(this).val() == '') {
