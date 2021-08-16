@@ -276,6 +276,13 @@ padding: 0;
 .label {
 	margin: 20px auto;
 }
+.characts label {
+	display: inline-block;
+	width: 155px;
+}
+.characts input {
+	margin: 10px;
+}
 select {
 	background:#dbdbdb;
 	border:none;
