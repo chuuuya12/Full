@@ -40,7 +40,7 @@ a {
 	overflow: hidden;
 	text-decoration: none;
 	text-transform: uppercase;
-	transition: 0.5s;
+	transition: 0.1s;
 	cursor: pointer;
 }
 .btn:hover, .btn:focus
@@ -60,7 +60,7 @@ a {
 	overflow: hidden;
 	text-decoration: none;
 	text-transform: uppercase;
-	transition: 0.5s;
+	transition: 0.2s;
 	cursor: pointer;
 }
 #leave-btn:hover, #leave-btn:focus {
@@ -135,10 +135,10 @@ a {
 	color: #fff;
 	font-weight: 300;
 	font-size: 18px;
-	-webkit-transition: all .2s ease-in-out;
-	-moz-transition: all .2s ease-in-out;
-	-o-transition: all .2s ease-in-out;
-	transition: all .2s ease-in-out;
+	-webkit-transition: all .1s ease-in-out;
+	-moz-transition: all .1s ease-in-out;
+	-o-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
 }
 #msg:focus {
 	outline: 0;
