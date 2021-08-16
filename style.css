@@ -278,11 +278,19 @@ padding: 0;
 }
 .characts label {
 	display: inline-block;
-	width: 155px;
+	width: 169px;
 }
 .characts input {
-	margin: 10px;
+	margin: 0 10px;
 }
+[id="1"]:not(:checked) ~ select > [label="One Piece"], 
+[id="1"]:not(:checked) ~ select > [label ="Jujutsu Kaisen"],
+[id="1"]:not(:checked) ~ select > [label ="Bungo Stray Dogs"],
+[id="1"]:not(:checked) ~ select > [label ="Attack On Titan"],
+[id="1"]:not(:checked) ~ select > [label ="Kono Subarashii Sekai ni Shukufuku o!"],
+[id="2"]:not(:checked) ~ select > [label="DC Comics"],
+[id="3"]:not(:checked) ~ select > [label="Marvel"]{ display: none; }
+
 select {
 	background:#dbdbdb;
 	border:none;
