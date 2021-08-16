@@ -268,7 +268,10 @@ padding: 0;
 	margin-top: 20px;
 	width: 100%;
 }
+.characts {
+	margin: 7px auto;
 
+}
 select {
 	background:#dbdbdb;
 	border:none;

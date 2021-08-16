@@ -13,6 +13,15 @@
 		<link rel="stylesheet" href="style.css" />
 		<link rel="shortcut icon" href="test.png" type="image/x-icon">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<style>
+		[id="1"]:not(:checked) ~ select > [label="One Piece"], 
+[id="1"]:not(:checked) ~ select > [label ="Jujutsu Kaisen"],
+[id="1"]:not(:checked) ~ select > [label ="Bungo Stray Dogs"],
+[id="1"]:not(:checked) ~ select > [label ="Attack On Titan"],
+[id="1"]:not(:checked) ~ select > [label ="Kono Subarashii Sekai ni Shukufuku o!"],
+[id="2"]:not(:checked) ~ select > [label=DC]{ display: none; }
+
+	</style>
 		<title>The Muse Site</title>
 	</head>
 	<body>
@@ -42,9 +51,19 @@
 						<label for="room">Create a Room</label>
 						<input type="text" name="room" id="room" placeholder="Your room name" required>
 						<label for="character">Select a character:</label>
-						<select id="character" name="character" onchange="myFunction()" onselect="copyTextValue()">
+						<div class="characts">
+						<label for="1">Anime/Manga</label>
+						<input type="checkbox" name="anime-manga" id="1">
+						
+						<label for="2">DC Comics</label>
+						<input type="checkbox" name="dc-comics" id="2">
+						<label for="3">Marvel</label>
+						<input type="checkbox" name="mv-comics" id="3">
+						<label for="4">Game Characters</label>
+						<input type="checkbox" name="games" id="4">
+						<select id="character" name="character" onchange="myFunction()">
 							<option value="">none/other</option>
-							<optgroup label="One Piece"></optgroup>
+							<optgroup label="One Piece">
 							<option value="Monkey D. Luffy">Monkey D. Luffy</option>
 							<option value="Roronoa Zoro">Roronoa Zoro</option>
 							<option value="Nami">Nami</option>
@@ -62,7 +81,8 @@
 							<option value="Big Mom">Big Mom</option>
 							<option value="Kaido">Kaido</option>
 							<option value="Black Beard">Black Beard</option>
-							<optgroup label="Jujutsu Kaisen"></optgroup>
+							</optgroup>
+							<optgroup label="Jujutsu Kaisen">
 							<option value="Yuji Itadori">Yuji Itadori</option>
 							<option value="Satoru Gojo">Satoru Gojo</option>
 							<option value="Megumi Fushiguro">Megumi Fushiguro</option>
@@ -75,7 +95,8 @@
 							<option value="Kento Nanami">Kento Nanami</option>
 							<option value="Mahito">Mahito</option>
 							<option value="Panda">Panda</option>
-							<optgroup label="Bungo Stray Dogs"></optgroup>
+							</optgroup>
+							<optgroup label="Bungo Stray Dogs">
 							<option value="Atsushi Nakajima">Atsushi Nakajima</option>
 							<option value="Osamu Dazai">Osamu Dazai</option>
 							<option value="Chūya Nakahara">Chūya Nakahara</option>
@@ -84,7 +105,8 @@
 							<option value="Akiko Yosano">Akiko Yosano</option>
 							<option value="Demon Snow">Kyōka Izumi</option>
 							<option value="Ranpo Edogawa">Ranpo Edogawa</option>
-							<optgroup label="Attack On Titan"></optgroup>
+							</optgroup>
+							<optgroup label="Attack On Titan">
 							<option value="Eren Jaeger">Eren Jaeger</option>
 							<option value="Mikasa Ackerman">Mikasa Ackerman</option>
 							<option value="Armin Arlelt">Armin Arlelt</option>
@@ -98,28 +120,20 @@
 							<option value="Sasha Braus">Sasha Braus</option>
 							<option value="Hange Zoë">Hange Zoë</option>
 							<option value="Erwin Smith">Erwin Smith</option>
-							<optgroup label="Kono Subarashii Sekai ni Shukufuku o!"></optgroup>
+							</optgroup>
+							<optgroup label="Kono Subarashii Sekai ni Shukufuku o!">
 							<option value="Satou Kazuma">Satou Kazuma</option>
 							<option value="Aqua">Aqua</option>
 							<option value="Darkness">Darkness</option>
 							<option value="Yunyun">Yunyun</option>
-						</optgroup>
+							</optgroup>
+							<optgroup label="DC">
+								<option value="Superman">Superman</option>
+							</optgroup>
 						</select>
-						<p id="text_preview_container">
-						</p>
-						<div class="ctg">
-							<h2 id="categs">Categories</h2>
-							<div class="container">
-						<label for="anime-manga">Anime/Manga</label>
-						<input type="checkbox" name="anime-manga" id="anime-manga">
-						<label for="dc-comics">DC Comics</label>
-						<input type="checkbox" name="dc-comics" id="dc-comics">
-						<label for="mv-comics">Marvel</label>
-						<input type="checkbox" name="mv-comics" id="mv-comics">
-						<label for="games">Game Characters</label>
-						<input type="checkbox" name="games" id="games">
 					</div>
-						</div>
+					<p id="text_preview_container">
+					</p>
 					<button type="submit" class="btn">Join Chat</button>
 				</form>
 			</main>
@@ -164,6 +178,7 @@ function updateFirst(event) {
 $('#hexcolor').on('input', function() {
   $('#colorPicker').val(this.value);
 });
+
 		</script>
 	</body>
 </html>
