@@ -56,7 +56,7 @@
 						<label for="4">Game Characters</label>
 						<input type="checkbox" name="games" id="4">
 						<select id="character" name="character" onchange="myFunction()">
-							<option value="">none/other</option>
+							<option value="">anonymous/other</option>
 							<optgroup label="One Piece">
 							<option value="Monkey D. Luffy">Monkey D. Luffy</option>
 							<option value="Roronoa Zoro">Roronoa Zoro</option>
@@ -268,7 +268,7 @@
 					</div>
 					<p id="text_preview_container">
 					</p>
-					<button type="submit" class="btn">Join Chat</button>
+					<button type="submit" class="btn">Create a Room</button>
 				</form>
 			</main>
 		</div>
@@ -282,7 +282,6 @@
     var val = e.options[e.selectedIndex].value;
     document.getElementById("username").value = val;
 		}
-
 
 
 // change color of text_preview_container
@@ -325,13 +324,7 @@ $('#character').change(function() {
 });
 
 
-$('#character').change(function() {
-    if( $(this).val() == '') {
-        $('#colorPicker').prop( "disabled", false );
-    } else {       
-        $('#colorPicker').prop( "disabled", true );
-    }
-});
+
 
 		</script>
 	</body>
