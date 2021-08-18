@@ -58,11 +58,11 @@
 						<select id="character" name="character" onchange="myFunction()">
 							<option label=" "></option>
 							<optgroup label="One Piece">
-							<option value="red">Monkey D. Luffy</option>
-							<option value="Roronoa Zoro">Roronoa Zoro</option>
-							<option value="Nami">Nami</option>
-							<option value="Usopp">Usopp</option>
-							<option value="Vinsmoke Sanji">Vinsmoke Sanji</option>
+							<option value="#db0000">Monkey D. Luffy</option>
+							<option value="#04c601">Roronoa Zoro</option>
+							<option value="#FFA500">Nami</option>
+							<option value="#FFFF00">Usopp</option>
+							<option value="#0000FF">Vinsmoke Sanji</option>
 							<option value="Tony Tony Chopper">Tony Tony Chopper</option>
 							<option value="Nico Robin">Nico Robin</option>
 							<option value="Franky">Franky</option>
@@ -277,9 +277,11 @@
 			function myFunction() {
 				var e = document.getElementById("character");
     var val = e.options[e.selectedIndex].text;
+	var cllr = e.options[e.selectedIndex].value;
     document.getElementById("username").value = val;
- document.getElementById("text_preview_container").innerHTML = val;
-	
+ 	document.getElementById("text_preview_container").innerHTML = val;
+ 	document.getElementById("hexcolor").value = cllr;
+ 	document.getElementById("colorPicker").value = cllr;
 		}
 		
 		var select = document.querySelector("#character");
@@ -290,6 +292,7 @@ select.addEventListener('change', function() {
   text.style.color = selectedOption.value;
 
 });
+
 
 
 // change color of text_preview_container
@@ -321,8 +324,6 @@ $('#hexcolor').on('input', function() {
 });
 
 // Disable when picking a character
-
-
 $('#character').change(function() {
     if( $(this).val() == '') {
         $('#hexcolor').prop( "disabled", false );
@@ -330,6 +331,15 @@ $('#character').change(function() {
         $('#hexcolor').prop( "disabled", true );
     }
 });
+$('#character').change(function() {
+    if( $(this).val() == '') {
+        $('#colorPicker').prop( "disabled", false );
+    } else {       
+        $('#colorPicker').prop( "disabled", true );
+    }
+});
+
+
 
 
 
