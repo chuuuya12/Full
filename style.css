@@ -347,12 +347,14 @@ select {
 
 #text_preview_container {
 	color: black;
-	background-color: #eee;
+	background-color: rgb(80, 80, 80);
     padding: 3px 5px;
     font-weight: bold;
-    border: 1px solid #ccc;
-    border-radius: 2px;
+    border: 1px solid rgb(31, 31, 31);
+	box-shadow: 1px 1px 11px 1px black;
+    border-radius: 5px;
     margin-top: 0px;
+	text-align: center;
 }
 #categs {
 	margin: 5px auto 10px;
