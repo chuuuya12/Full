@@ -1,4 +1,4 @@
-const moment = require('moment-timezone');
+const moment = require('moment');
 
 
 
@@ -7,7 +7,7 @@ function formatMessage(username,ucolor, text) {
         username,
         ucolor,
         text,
-        time: moment(new Date({your_date})).zone("+08:00").format('h:mm:a')
+        time: moment().tz('').format('h:mm:a')
     }
 }
 
