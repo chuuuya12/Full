@@ -7,7 +7,7 @@ function formatMessage(username,ucolor, text) {
         username,
         ucolor,
         text,
-        time: moment(1369266934311).tz('America/Phoenix').format('h:mm:a')
+        time: moment(new Date({your_date})).zone("+08:00").format('h:mm:a')
     }
 }
 
