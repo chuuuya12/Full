@@ -32,6 +32,7 @@
 							class="xyz"
 							placeholder="Enter your name..."
 							required
+							maxlength="21"
 						/>
 						<label for="color-picker">Color:</label>
 					<div class="form-control" id="color">
@@ -284,7 +285,6 @@
  	document.getElementById("hexcolor").value = cllr;
  	document.getElementById("colorPicker").value = cllr;
 
-
 		}
 		
 
@@ -332,7 +332,13 @@ $('#hexcolor').on('input', function() {
 
 
 
-
+$('#character').change(function() {
+    if( $(this).val() == '') {
+        $('#username').prop( "disabled", false );
+    } else {       
+        $('#username').prop( "disabled", true );
+    }
+});
 
 
 		</script>
