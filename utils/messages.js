@@ -11,4 +11,12 @@ function formatMessage(username,ucolor, text) {
     }
 }
 
-module.exports = formatMessage
+let generatedLocationMessage = (from, lat, lng) => {
+    return {
+        from, 
+        url: `https://www.google.com/maps?q=${lat}, ${lng}`,
+        createAt: new Date().getTime()
+    }
+}
+
+module.exports = {formatMessage, generatedLocationMessage};
