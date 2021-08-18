@@ -36,7 +36,7 @@
 						<label for="color-picker">Color:</label>
 					<div class="form-control" id="color">
 						<input type="color" id="colorPicker" name="ucolor" pattern="^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$" value="#000000"> 
-						<input type="text" pattern="^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$" value="#000000" id="hexcolor"></input>
+						<input type="text" pattern="^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$" value="#000000" id="hexcolor">
 					</div>
 					</div>
 					<div class="form-control">
@@ -56,9 +56,9 @@
 						<label for="4">Game Characters</label>
 						<input type="checkbox" name="games" id="4">
 						<select id="character" name="character" onchange="myFunction()">
-							<option value="">anonymous/other</option>
+							<option label=" "></option>
 							<optgroup label="One Piece">
-							<option value="Monkey D. Luffy">Monkey D. Luffy</option>
+							<option value="red">Monkey D. Luffy</option>
 							<option value="Roronoa Zoro">Roronoa Zoro</option>
 							<option value="Nami">Nami</option>
 							<option value="Usopp">Usopp</option>
@@ -275,13 +275,21 @@
 		<script>
 			// Drop down select menu
 			function myFunction() {
-  var x = document.getElementById("character").value;
-  document.getElementById("text_preview_container").innerHTML = "" + x;
-
-  var e = document.getElementById("character");
-    var val = e.options[e.selectedIndex].value;
+				var e = document.getElementById("character");
+    var val = e.options[e.selectedIndex].text;
     document.getElementById("username").value = val;
+ document.getElementById("text_preview_container").innerHTML = val;
+	
 		}
+		
+		var select = document.querySelector("#character");
+var text = document.getElementById("text_preview_container");
+select.addEventListener('change', function() {
+  var options = this.options;
+  var selectedOption = options[options.selectedIndex];
+  text.style.color = selectedOption.value;
+
+});
 
 
 // change color of text_preview_container
