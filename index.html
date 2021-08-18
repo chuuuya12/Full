@@ -323,21 +323,7 @@ $('#hexcolor').on('input', function() {
   $('#colorPicker').val(this.value);
 });
 
-// Disable when picking a character
-$('#character').change(function() {
-    if( $(this).val() == '') {
-        $('#hexcolor').prop( "disabled", false );
-    } else {       
-        $('#hexcolor').prop( "disabled", true );
-    }
-});
-$('#character').change(function() {
-    if( $(this).val() == '') {
-        $('#colorPicker').prop( "disabled", false );
-    } else {       
-        $('#colorPicker').prop( "disabled", true );
-    }
-});
+
 
 
 
