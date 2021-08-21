@@ -18,7 +18,7 @@ const io = socketio(server);
 // Set static folder
 app.use(express.static(path.join(__dirname)));
 
-const botName = 'Chat Bot';
+const botName = 'The Muse Bot ';
 
 
 
