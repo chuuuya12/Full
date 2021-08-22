@@ -108,8 +108,11 @@ a {
 .right {
 	margin: 80px auto;
 	width: 700px;
-	height: 748px;
-	background-color: green;
+	max-height: 748px;
+	padding-bottom: 744px;
+	background: var(--dark-color-b);
+	border-left: 1px solid white;
+	box-shadow: 1px 1px 50px 5px black;
 	float: left;
 	text-align: center;
 }
