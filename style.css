@@ -113,6 +113,10 @@ a {
 	float: left;
 	text-align: center;
 }
+.right h2 {
+	margin: 30px auto;
+	border-bottom: 1px solid white;
+}
 
 .join-header {
 	font-family: 'Playfair Display', serif;
