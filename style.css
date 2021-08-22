@@ -118,6 +118,7 @@ a {
 .right h2 {
 	margin: 30px auto;
 	border-bottom: 1px solid white;
+	padding-bottom: 10px;
 }
 .troom_list ul {
 	margin: 20px auto;
@@ -127,7 +128,7 @@ a {
 }
 .troom_list {
 	max-width: 700px;
-	padding-bottom: 657px;
+	padding-bottom: 617px;
 }
 .join-header {
 	font-family: 'Playfair Display', serif;
