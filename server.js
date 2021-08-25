@@ -95,6 +95,7 @@ function connect(socket, data){
 	// sends a list of all active rooms in the
 	// server
 	socket.emit('roomslist', { rooms: getRooms() });
+  console.log(data.clientId)
 }
 
 const INDEX = '/chat.html';
