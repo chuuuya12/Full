@@ -40,8 +40,6 @@ io.on('connection', socket => {
         formatMessage(botName,"#000000", `${user.username} has joined`)
       );
 
-io.sockets.manager.roomClients[socket.id]
-      
 
     // Send users and room info
     io.to(user.room).emit('roomUsers', {
