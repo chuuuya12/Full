@@ -96,3 +96,38 @@ document.getElementById('leave-btn').addEventListener('click', () => {
 });
 
 
+// app.js
+
+//Listen for the setup event and create rooms
+socket.on('setup', function (data) {        
+  var rooms = data.rooms;
+
+  for (var r = 0; r < rooms.length; r++) {
+      //Loop and append room to the window room menu
+      handleRoomSubMenu(r);
+  }
+
+  //Handle creation of room
+  function handleRoomSubMenu(r) {
+      var clickedRoom = rooms[r];
+      //Append each room to the menu
+      roomsMenu.append(new GUI.MenuItem({
+          label: clickedRoom.toUpperCase(),
+          click: function () {
+              //What happens on clicking the rooms? Swtich room.
+              $scope.room = clickedRoom.toUpperCase();
+              //Notify the server that the user changed his room
+              socket.emit('switch room', {
+                  newRoom: clickedRoom,
+                  username: $scope.username
+              });
+              //Fetch the new rooms messages
+              $http.get(serverBaseUrl + '/msg?room=' + clickedRoom).success(function (msgs) {
+                  $scope.messages = msgs;
+              });
+          }
+      }));
+  }
+  //Attach menu
+  GUI.Window.get().menu = windowMenu;
+});
