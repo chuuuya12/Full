@@ -3,7 +3,6 @@ const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
 const formatMessage = require('./utils/messages');
-self.server.manager.rooms[self.namespace].keys()
 const {
   userJoin,
   getCurrentUser,
