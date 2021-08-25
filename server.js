@@ -3,7 +3,6 @@ const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
 const formatMessage = require('./utils/messages');
-self.server.manager.rooms.keys()
 const {
   userJoin,
   getCurrentUser,
@@ -41,6 +40,7 @@ io.on('connection', socket => {
         formatMessage(botName,"#000000", `${user.username} has joined`)
       );
 
+io.sockets.manager.roomClients[socket.id]
       
 
     // Send users and room info
