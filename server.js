@@ -74,29 +74,7 @@ io.on('connection', socket => {
     }
   });
 });
-function connect(socket, data){
-	//generate clientId
-	data.clientId = generateId();
 
-	// save the client to the hash object for
-	// quick access, we can save this data on
-	// the socket with 'socket.set(key, value)'
-	// but the only way to pull it back will be
-	// async
-	chatClients[socket.id] = data;
-
-	// now the client objtec is ready, update
-	// the client
-	socket.emit('ready', { clientId: data.clientId });
-	
-	// auto subscribe the client to the 'lobby'
-	subscribe(socket, { room: 'lobby' });
-
-	// sends a list of all active rooms in the
-	// server
-	socket.emit('roomslist', { rooms: getRooms() });
-  console.log(data.clientId)
-}
 
 const INDEX = '/chat.html';
 
