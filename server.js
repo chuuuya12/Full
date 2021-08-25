@@ -5,8 +5,6 @@ const socketio = require('socket.io');
 const { createClient } = require('redis');
 const redisAdapter = require('@socket.io/redis-adapter');
 const formatMessage = require('./utils/messages');
-const subClient = pubClient.duplicate();
-io.adapter(redisAdapter(pubClient, subClient));
 const {
   userJoin,
   getCurrentUser,
