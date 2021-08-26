@@ -2,6 +2,7 @@ const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
+const gameRoomsOnline = [];
 
 
 
@@ -13,6 +14,10 @@ const { username, room ,ucolor} = Qs.parse(location.search, {
 
 const socket = io('https://chatnonymous-bot-deploy.herokuapp.com/');
 
+$('input[name=username]').val(fillerName);
+if (hasCookie == false){
+  $('input[name=username]').val(randomUsername());
+}
 
 // Join chatroom
 socket.emit('joinRoom', { username, room,ucolor });
