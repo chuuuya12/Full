@@ -42,6 +42,14 @@ io.on('connection', socket => {
         formatMessage(botName,"#000000", `${user.username} has joined`)
       );
 
+      io.of("/orders").on("connection", (socket) => {
+        socket.on("order:list", () => {});
+        socket.on("order:create", () => {});
+      });
+      
+      io.of("/users").on("connection", (socket) => {
+        socket.on("user:list", () => {});
+      });
 
     // Send users and room info
     io.to(user.room).emit('roomUsers', {
