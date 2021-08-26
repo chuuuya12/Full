@@ -24,7 +24,7 @@ socket.on('roomUsers', ({ room, users }) => {
 });
 
 function getSocketsInRoom(room, namespace = '/') {
-  let room = io.nsps[namespace].adapter.rooms[room];
+  let roomlist = io.nsps[namespace].adapter.rooms[room];
   return room.sockets;
 }
 
