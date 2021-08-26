@@ -5,8 +5,6 @@ const socketio = require('socket.io');
 const { createClient } = require('redis');
 const redisAdapter = require('@socket.io/redis-adapter');
 const formatMessage = require('./utils/messages');
-const chatHistory = [];
-const onlineRooms = [];
 const {
   userJoin,
   getCurrentUser,
@@ -63,12 +61,6 @@ io.on('connection', socket => {
   // Runs when client disconnects
   socket.on('disconnect', () => {
     const user = userLeave(socket.id);
-
-    socket.on('createNewRoom', function(req){
-      onlineRooms.push(req.roomName);
-      // console.log(req.roomName);
-      // console.log(onlineRooms);
-    });
 
     if (user) {
       io.to(user.room).emit(
