@@ -22,7 +22,9 @@ app.use(express.static(path.join(__dirname)));
 
 const botName = 'The Muse Bot ';
 
-
+io.sockets.on('connection', function (socket) {
+  socket.broadcast.to('room').emit('event_name', data) //emit to 'room' except this socket
+})
 
 // Run when client connects
 io.on('connection', socket => {
