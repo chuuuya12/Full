@@ -22,9 +22,7 @@ app.use(express.static(path.join(__dirname)));
 
 const botName = 'The Muse Bot ';
 
-const room = io.sockets.adapter.rooms['my_room'];
-room.length;
-console.log('room');
+
 
 // Run when client connects
 io.on('connection', socket => {
