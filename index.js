@@ -37,6 +37,8 @@ socket.on('message', (message) => {
 chatForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
+
+  let roomlist = e.target.element.room.value;
   // Get message text
   let msg = e.target.elements.msg.value;
 
