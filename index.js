@@ -26,7 +26,7 @@ socket.on('roomUsers', ({ room, users }) => {
 
 socket.on('room', (room) => {
   outputRoomName(room);
-
+console.log(room);
 
   let roomlist = e.target.element.room.value;
   room = room.trim();
