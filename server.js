@@ -56,9 +56,7 @@ io.on('connection', socket => {
     }
  });
  const clients = io.sockets.adapter.rooms.get('Room Name');
- const numClients = clients ? clients.size : 0;
- io.to('Room Name').emit('new event', 'Updates');
- const clientSocket = io.sockets.sockets.get(clientId);
+ 
 
   // Listen for chatMessage
   socket.on('chatMessage', msg => {
