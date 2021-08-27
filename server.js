@@ -35,29 +35,7 @@ const botName = 'The Muse Bot';
 
 
 
-  //This is an event listener for the first socket request that is not http, but thanks to passportSocketIo middleware it carries session user info
-  io.on("connection", socket => {
-    let currentRoom = "main";
-    socket.join(currentRoom); //As a new socket connects it joins to "main" room
-    let userName = socket.request.user.name
-      ? socket.request.user.name
-      : socket.request.user.username;
-    usersList[currentRoom] = usersList[currentRoom] || [];
-    usersList[currentRoom].push(userName); //Push the user connected to the usersList
-    currentUsers++; //Increment the counter of Users at every connection
 
-    console.log(`User ${socket.request.user.name} has connected.`);
-    
-  })
-    /*** Emitting info upon every new socket connection***/
-    
-     //------------------------------------------------------------------
-    //emits user info to the main room upon the first connection
-
-    io.to(currentRoom).emit("users list", {
-      usersList: usersList[currentRoom]
-    }); 
-    
 
 // Run when client connects
 io.on('connection', socket => {
