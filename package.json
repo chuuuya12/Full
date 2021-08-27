@@ -24,6 +24,7 @@
     "express": "^4.17.1",
     "jquery": "^3.6.0",
     "jquery-asColorPicker": "^0.4.4",
+    "mime": "^2.5.2",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.33",
     "moment-timezone-all": "^0.5.5",

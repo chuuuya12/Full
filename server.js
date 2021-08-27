@@ -5,6 +5,7 @@ const socketio = require('socket.io');
 const { createClient } = require('redis');
 const redisAdapter = require('@socket.io/redis-adapter');
 const formatMessage = require('./utils/messages');
+const ChatRoom = require('./utils/chat-room');
 const {
   userJoin,
   getCurrentUser,
@@ -16,6 +17,8 @@ const {
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
+const chatRooms = [];
+const chatHistory = {};
 
 // Set static folder
 app.use(express.static(path.join(__dirname)));
