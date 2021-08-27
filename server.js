@@ -55,7 +55,7 @@ io.on('connection', socket => {
         console.log(idx,"-->",room)
     }
  });
- const clients = io.sockets.adapter.rooms.get('Room Name');
+ const clients = io.sockets.adapter.rooms.get('user.room');
  
 
   // Listen for chatMessage
