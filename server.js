@@ -55,13 +55,18 @@ io.on('connection', socket => {
         console.log(idx,"-->",room)
     }
  });
- const clients = io.sockets.adapter.rooms.get('user.room');
- console.log("clients");
+
+ socket.on('room_list', room => {
+  const clients = io.sockets.adapter.rooms.get('room');
+
+  console.log("clients");
+
+ });
 
   // Listen for chatMessage
   socket.on('chatMessage', msg => {
     const user = getCurrentUser(socket.id);
-
+    
     io.to(user.room).emit('message', formatMessage(user.username,user.ucolor, msg));
   });
 
