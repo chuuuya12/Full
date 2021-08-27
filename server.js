@@ -52,18 +52,7 @@ io.on('connection', socket => {
 
 
 
- socket.on('room_list', room => {
-  const clients = io.sockets.adapter.rooms.get('room');
 
-  console.log("clients");
-  Object.keys(socket.rooms).forEach(function(room, idx) {
-    if(idx!=0){
-        console.log(idx,"-->",room)
-    }
- });
-  io.to (clients.room).emit('room_list', formatRoom(room));
-
- });
 
   // Listen for chatMessage
   socket.on('chatMessage', msg => {
