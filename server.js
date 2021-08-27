@@ -17,6 +17,9 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
+const clientsInRoom = io.sockets.adapter.rooms
+console.log('clientInRoom');
+
 // Set static folder
 app.use(express.static(path.join(__dirname)));
 
