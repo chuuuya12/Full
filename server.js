@@ -80,7 +80,11 @@ io.on('connection', socket => {
   });
 });
 
+  io.of("/roomlist").on("connection", socket => {
 
+
+    io.emit("List rooms")
+  });
 
 const INDEX = '/chat.html';
 
