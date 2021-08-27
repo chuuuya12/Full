@@ -80,6 +80,21 @@ io.on('connection', socket => {
   });
 });
 
+socket.on('message_to_server', function(data) {
+  var room = chatRooms[data["room"]];
+
+  console.log(user.username + ": " + messageText + " in room " + user.room + " at " + sentAt);
+  
+  if (!chatHistory.hasOwnProperty(room.id)) {
+    // create new chat history
+    chatHistory[room.id] = [];
+  }
+  var history = chatHistory[room.id];
+  history.push(message);
+
+  io.sockets.in(user.room).emit('message_to_client', { chat_history: history } );
+	});
+
 const INDEX = '/chat.html';
 
 const PORT = process.env.PORT || 8080;
