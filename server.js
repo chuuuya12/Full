@@ -81,7 +81,8 @@ io.on('connection', socket => {
 });
 
   io.of("/roomlist").on("connection", socket => {
-    room:room
+    room:room;
+    room: getRoomUsers(room);
 
     io.emit("List rooms")
   });
