@@ -26,7 +26,7 @@ const botName = 'The Muse Bot ';
 
 // Run when client connects
 io.on('connection', socket => {
-  socket.on('create', ({ username,ucolor, room }) => {
+  socket.on('joinRoom', ({ username,ucolor, room }) => {
     const user = userJoin(socket.id,ucolor, username, room);
 
     socket.join(user.room);
