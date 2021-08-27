@@ -75,13 +75,7 @@ function outputMessage(message) {
 function outputRoomName(room) {
   roomName.innerText = room;
 }
-function get_user_by_room(nsp, room) {
-  var user = []
-  for (var id in io.of(nsp).adapter.rooms[room]) {
-    user.push(io.of(nsp).adapter.nsp.connected[id]);
-  };
-  return user;
-};
+
 // Add users to DOM
 function outputUsers(users) {
   userList.innerHTML = '';
