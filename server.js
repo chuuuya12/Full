@@ -61,6 +61,7 @@ io.on('connection', socket => {
 
   console.log("clients");
 
+  io.to (clients.room).emit('room_list', formatRoom(room));
  });
 
   // Listen for chatMessage
