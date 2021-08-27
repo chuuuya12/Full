@@ -50,6 +50,12 @@ io.on('connection', socket => {
     });
   });
 
+  Object.keys(socket.rooms).forEach(function(room, idx) {
+    if(idx!=0){
+        console.log(idx,"-->",room)
+    }
+ });
+
   // Listen for chatMessage
   socket.on('chatMessage', msg => {
     const user = getCurrentUser(socket.id);
