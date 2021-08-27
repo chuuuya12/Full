@@ -24,15 +24,6 @@ socket.on('roomUsers', ({ room, users }) => {
   outputUsers(users);
 });
 
-socket.on('room', (room) => {
-  outputRoomName(room);
-console.log(room);
-
-  let roomlist = e.target.element.room.value;
-  room = room.trim();
-
-});
-
 // Message from server
 socket.on('message', (message) => {
   console.log(message);

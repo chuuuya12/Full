@@ -80,12 +80,7 @@ io.on('connection', socket => {
   });
 });
 
-  io.of("/roomlist").on("connection", socket => {
-    room:room;
-    room: getRoomUsers(room);
 
-    io.emit("List rooms")
-  });
 
 const INDEX = '/chat.html';
 
