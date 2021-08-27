@@ -17,11 +17,10 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-
 // Set static folder
 app.use(express.static(path.join(__dirname)));
 
-const botName = 'The Muse Bot ';
+const botName = 'The Muse Bot';
 
 
 
@@ -42,7 +41,9 @@ io.on('connection', socket => {
         'message',
         formatMessage(botName,"#000000", `${user.username} has joined`)
       );
+
       
+
     // Send users and room info
     io.to(user.room).emit('roomUsers', {
       room: user.room,
@@ -50,14 +51,10 @@ io.on('connection', socket => {
     });
   });
 
-
-
-
-
   // Listen for chatMessage
   socket.on('chatMessage', msg => {
     const user = getCurrentUser(socket.id);
-    
+
     io.to(user.room).emit('message', formatMessage(user.username,user.ucolor, msg));
   });
 
@@ -79,7 +76,6 @@ io.on('connection', socket => {
     }
   });
 });
-
 
 const INDEX = '/chat.html';
 
