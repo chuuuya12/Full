@@ -15,7 +15,7 @@ const socket = io('https://chatnonymous-bot-deploy.herokuapp.com/');
 
 io.nsps['/'].adapter.rooms
 
-function getSocketsInRoom(room, namespace = '/') {
+function getSocketsInRoom(room, namespace = '') {
   let roomlist = io.nsps[namespace].adapter.rooms[room];
   return room.sockets;
 }
