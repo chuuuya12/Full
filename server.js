@@ -17,8 +17,12 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-const clientsInRoom = io.sockets.adapter.rooms
-console.log('clientInRoom');
+io.nsps['/'].adapter.rooms
+
+function getSocketsInRoom(room, namespace = '/') {
+  let room = io.nsps[namespace].adapter.rooms[room];
+  return room.sockets;
+}
 
 // Set static folder
 app.use(express.static(path.join(__dirname)));
