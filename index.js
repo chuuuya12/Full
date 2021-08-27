@@ -13,9 +13,9 @@ const { username, room ,ucolor} = Qs.parse(location.search, {
 
 const socket = io('https://chatnonymous-bot-deploy.herokuapp.com/');
 
-io.nsps[''].adapter.rooms
+io.nsps['list_room'].adapter.rooms
 
-function getSocketsInRoom(room, namespace = '') {
+function getSocketsInRoom(room, namespace = 'list_room') {
   let roomlist = io.nsps[namespace].adapter.rooms[room];
   return room.sockets;
 }
