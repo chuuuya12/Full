@@ -42,7 +42,15 @@ io.on('connection', socket => {
         formatMessage(botName,"#000000", `${user.username} has joined`)
       );
 
+      io.on("connection", (socket) => {
+
+        console.log(socket.rooms); // Set { <socket.id> }
       
+        socket.join("room");
+      
+        console.log(socket.room); // Set { <socket.id>, "room1" }
+      
+      });
 
     // Send users and room info
     io.to(user.room).emit('roomUsers', {
