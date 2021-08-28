@@ -26,6 +26,8 @@ app.use(express.static(path.join(__dirname)));
 const botName = 'Chat Bot';
 
 namespace.on('connection', socket => {
+  const room = roomJoin(socket.id,room);
+  
   console.log("user is connected to a new room")
 });
 
