@@ -20,7 +20,7 @@ const io = socketio(server);
 // Set static folder
 app.use(express.static(path.join(__dirname)));
 
-const botName = 'The Muse Bot';
+const botName = 'Chat Bot';
 
 
 
@@ -75,12 +75,6 @@ io.on('connection', socket => {
       });
     }
   });
-});
-
-socket.on('roomList', msg => {
-  const roomList = getCurrentroom(socket.id);
-
-  io.to(room).emit('roomList', formatRoom(room));
 });
 
 const INDEX = '/chat.html';
