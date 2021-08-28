@@ -11,8 +11,8 @@ const { username, room ,ucolor} = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
 
-const socket = io('https://chatnonymous-bot-deploy.herokuapp.com/');
-const namespace = io('https://chatnonymous-bot-deploy.herokuapp.com/namespace');
+const socket = io.connect('https://chatnonymous-bot-deploy.herokuapp.com/');
+const namespace = io.connect('https://chatnonymous-bot-deploy.herokuapp.com/namespace');
 
 
 // Join chatroom
