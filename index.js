@@ -12,7 +12,7 @@ const { username, room ,ucolor} = Qs.parse(location.search, {
 });
 
 const socket = io('https://chatnonymous-bot-deploy.herokuapp.com/');
-
+const namespace = io('https://chatnonymous-bot-deploy.herokuapp.com/namespace');
 
 
 // Join chatroom
