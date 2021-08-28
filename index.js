@@ -11,8 +11,8 @@ const { username, room ,ucolor} = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
 
-const socket = io.connect('https://chatnonymous-bot-deploy.herokuapp.com/');
-const namespace = io.connect('https://chatnonymous-bot-deploy.herokuapp.com/room');
+const socket = io('https://chatnonymous-bot-deploy.herokuapp.com/');
+
 
 
 // Join chatroom
@@ -53,8 +53,6 @@ chatForm.addEventListener('submit', (e) => {
   e.target.elements.msg.value = '';
   e.target.elements.msg.focus();
 });
-
-
 
 // Output message to DOM
 function outputMessage(message) {

@@ -16,20 +16,12 @@ const {
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
-const namespace = io.of("/room")
-
-
 
 // Set static folder
 app.use(express.static(path.join(__dirname)));
 
 const botName = 'Chat Bot';
 
-namespace.on('connection', socket => {
-  const room = roomJoin(socket.id,room);
-  
-  console.log("user is connected to a new room")
-});
 
 
 // Run when client connects
@@ -84,7 +76,6 @@ io.on('connection', socket => {
     }
   });
 });
-
 
 const INDEX = '/chat.html';
 
