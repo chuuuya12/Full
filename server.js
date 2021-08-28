@@ -27,12 +27,12 @@ const botName = 'Chat Bot';
 
 namespace.on('connection', socket => {
   const room = roomJoin(socket.id,room);
-  
+  app.get("/:roomName", function(res, req){
+    res.render("student", {room:req.params.roomName});
+})
   console.log("user is connected to a new room")
 });
-app.get("/:roomName", function(res, req){
-  res.render("student", {room:req.params.roomName});
-})
+
 
 // Run when client connects
 io.on('connection', socket => {
