@@ -73,7 +73,7 @@ function outputMessage(message) {
 
 // Add room name to DOM
 function outputRoomName(room) {
-  roomName.innerText = room,
+  roomName.innerText = room;
   roomList.innerText = room;
 }
 
