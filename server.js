@@ -77,12 +77,12 @@ io.on('connection', socket => {
   });
 });
 
+io.on('connection', socket => {
 
-io.of('/chat').in('general').clients((error, clients) => {
-  if (error) throw error;
-
-  // Returns an array of client IDs like ["Anw2LatarvGVVXEIAAAD"]
-  console.log(clients); 
+  console.log(socket.rooms);
+  socket.on('disconnect', () => {
+    // socket.rooms.size === 0
+  });
 });
 
 const INDEX = '/chat.html';
