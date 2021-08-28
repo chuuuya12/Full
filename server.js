@@ -77,6 +77,12 @@ io.on('connection', socket => {
   });
 });
 
+socket.on('roomList', msg => {
+  const roomList = getCurrentroom(socket.id);
+
+  io.to(room).emit('roomList', formatRoom(room));
+});
+
 const INDEX = '/chat.html';
 
 const PORT = process.env.PORT || 8080;
