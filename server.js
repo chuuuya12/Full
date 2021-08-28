@@ -30,7 +30,9 @@ namespace.on('connection', socket => {
   
   console.log("user is connected to a new room")
 });
-
+app.get("/:roomName", function(res, req){
+  res.render("student", {room:req.params.roomName});
+})
 
 // Run when client connects
 io.on('connection', socket => {
