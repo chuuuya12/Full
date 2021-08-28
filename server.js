@@ -78,14 +78,11 @@ io.on('connection', socket => {
 });
 
 
-io.on("connection", (socket) => {
+io.of('/chat').in('general').clients((error, clients) => {
+  if (error) throw error;
 
-  console.log(socket.rooms); // Set { <socket.id> }
-
-  socket.join("room");
-
-  console.log(socket.room); // Set { <socket.id>, "room1" }
-
+  // Returns an array of client IDs like ["Anw2LatarvGVVXEIAAAD"]
+  console.log(clients); 
 });
 
 const INDEX = '/chat.html';
