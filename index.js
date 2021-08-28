@@ -2,7 +2,7 @@ const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
-const roomList = document.getElementById('createdRoomList');
+
 
 
 
@@ -74,7 +74,6 @@ function outputMessage(message) {
 // Add room name to DOM
 function outputRoomName(room) {
   roomName.innerText = room;
-  roomList.innerText = room;
 }
 
 // Add users to DOM
