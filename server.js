@@ -77,13 +77,6 @@ io.on('connection', socket => {
   });
 });
 
-io.on('connection', socket => {
-
-  console.log(socket.rooms);
-  socket.on('disconnect', () => {
-    // socket.rooms.size === 0
-  });
-});
 
 const INDEX = '/chat.html';
 

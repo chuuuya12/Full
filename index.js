@@ -54,6 +54,15 @@ chatForm.addEventListener('submit', (e) => {
   e.target.elements.msg.focus();
 });
 
+
+io.on('connection', socket => {
+
+  console.log(socket.rooms);
+  socket.on('disconnect', () => {
+    // socket.rooms.size === 0
+  });
+});
+
 // Output message to DOM
 function outputMessage(message) {
   const div = document.createElement('div');

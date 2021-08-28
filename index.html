@@ -283,6 +283,16 @@
 			</div>
 		</div>
 		<script>
+			
+io.on('connection', socket => {
+
+console.log(socket.rooms);
+socket.on('disconnect', () => {
+  // socket.rooms.size === 0
+});
+});
+		</script>
+		<script>
 			// Drop down select menu
 			function myFunction() {
 				var e = document.getElementById("character");
