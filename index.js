@@ -24,6 +24,7 @@ socket.on('roomUsers', ({ room, users }) => {
   outputUsers(users);
 });
 socket.on('roomList', ({room}) => {
+  console.log(room);
   outputRoomList(room);
 
 });
