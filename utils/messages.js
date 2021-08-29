@@ -5,7 +5,7 @@ const formatMessage= (username,ucolor, text)=>{
         username,
         ucolor,
         text,
-    time: new Date().getTime()
+    time: new Date().getTime().format('h:mm:a')
     }
 
 }
