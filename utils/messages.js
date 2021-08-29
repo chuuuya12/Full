@@ -8,4 +8,4 @@ const generateMessage= (username,msg)=>{
     }
 
 }
-module.exports = formatMessage
+module.exports = generateMessage
