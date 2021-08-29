@@ -4,7 +4,7 @@ const formatMessage= (username,msg)=>{
         username,
         ucolor,
         text,
-    createdAt: new Date().getTime()
+    createdAt: new Date().getTime().format('h:mm:a')
     }
 
 }
