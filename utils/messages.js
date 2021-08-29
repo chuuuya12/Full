@@ -1,11 +1,14 @@
 const generateMessage= (username,msg)=>{
 
     return {
-        username,
-        ucolor,
-        text,
-        time: new Date().getTime()
+    username,
+    text: msg,
+    createdAt: new Date().getTime()
     }
 
 }
-module.exports = generateMessage
+
+module.exports= {
+    
+    generateMessage
+}
