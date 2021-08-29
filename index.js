@@ -68,7 +68,7 @@ function outputMessage(message) {
   para.innerText = message.text;
   div.appendChild(para);
   document.querySelector('.chat-messages').appendChild(div);
-  time: moment(message.formatMessage).time('h:mm a')
+  time: moment(message.time).format('h:mm a')
 }
 
 // Add room name to DOM
