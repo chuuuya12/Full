@@ -1,4 +1,4 @@
-const generateMessage= (username,msg)=>{
+const formatMessage= (username,msg)=>{
 
     return {
         username,
@@ -10,4 +10,4 @@ const generateMessage= (username,msg)=>{
 }
 
 
-module.exports = generateMessage
+module.exports = formatMessage
