@@ -4,7 +4,7 @@ const express = require('express');
 const socketio = require('socket.io');
 const { createClient } = require('redis');
 const redisAdapter = require('@socket.io/redis-adapter');
-const formatMessage = require('./utils/messages');
+const generateMessage = require('./utils/messages');
 const {
   userJoin,
   getCurrentUser,
@@ -32,14 +32,14 @@ io.on('connection', socket => {
     socket.join(user.room);
 
     // Welcome current user
-    socket.emit('message', formatMessage(botName,"#000000", 'Welcome!'));
+    socket.emit('message', generateMessage(botName,"#000000", 'Welcome!'));
 
     // Broadcast when a user connects
     socket.broadcast
       .to(user.room)
       .emit(
         'message',
-        formatMessage(botName,"#000000", `${user.username} has joined`)
+        generateMessage(botName,"#000000", `${user.username} has joined`)
       );
 
       
@@ -55,7 +55,7 @@ io.on('connection', socket => {
   socket.on('chatMessage', msg => {
     const user = getCurrentUser(socket.id);
 
-    io.to(user.room).emit('message', formatMessage(user.username,user.ucolor, msg));
+    io.to(user.room).emit('message', generateMessage(user.username,user.ucolor, msg));
   });
 
   // Runs when client disconnects
@@ -65,7 +65,7 @@ io.on('connection', socket => {
     if (user) {
       io.to(user.room).emit(
         'message',
-        formatMessage(botName, "#000000",`${user.username} has left`)
+        generateMessage(botName, "#000000",`${user.username} has left`)
       );
 
       // Send users and room info

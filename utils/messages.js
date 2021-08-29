@@ -1,14 +1,13 @@
-const moment = require('moment');
+const generateMessage= (username,msg)=>{
 
-
-
-function formatMessage(username,ucolor, text) {
     return {
         username,
         ucolor,
         text,
-        time: moment().format('h:mm:a')
+    createdAt: new Date().getTime()
     }
+
 }
 
-module.exports = formatMessage
+
+module.exports = generateMessage
