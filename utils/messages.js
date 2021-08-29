@@ -7,7 +7,7 @@ function formatMessage(username,ucolor, text, time) {
         username,
         ucolor,
         text,
-        time: moment(message.time).format('h:mm a')
+        time: moment(message).format('h:mm a')
     }
 }
 
