@@ -7,7 +7,7 @@ function formatMessage(username,ucolor, text) {
         username,
         ucolor,
         text,
-        time: moment().format()
+        time: moment().getTime()
     }
 }
 
