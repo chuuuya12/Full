@@ -3,7 +3,7 @@ const generateMessage= (username,msg)=>{
     return {
     username,
     text: msg,
-    createdAt: new currentDate().getTime()
+    createdAt: new Date().getTime().moment()
     }
 
 }
