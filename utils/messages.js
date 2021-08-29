@@ -7,7 +7,7 @@ function formatMessage(username,ucolor, text, time) {
         username,
         ucolor,
         text,
-        time: Intl.DateTimeFormat('h:mm:a').resolvedOptions().timeZone
+        time: moment(message.time).format('h:mm a')
     }
 }
 
