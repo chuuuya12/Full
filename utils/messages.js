@@ -2,12 +2,12 @@ const moment = require('moment');
 
 
 
-function formatMessage(username,ucolor, text) {
+function formatMessage(username,ucolor, text, time) {
     return {
         username,
         ucolor,
         text,
-        time: moment().getTime().format()
+        time: moment().format()
     }
 }
 
