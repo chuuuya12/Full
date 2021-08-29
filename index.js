@@ -61,7 +61,7 @@ function outputMessage(message) {
   p.classList.add('meta');
   p.innerText = message.username;
   p.style=`color: ${message.ucolor}`
-  p.innerHTML += `<span> ${message.createdAt}</span>`, `createdAt: moment(message.createdAt).format('h:mm a')`;
+  p.innerHTML += `<span> ${message.createdAt}</span>`;
   div.appendChild(p);
   const para = document.createElement('p');
   para.classList.add('text');
