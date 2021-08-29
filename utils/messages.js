@@ -9,9 +9,4 @@ const formatMessage= (username,ucolor, text)=>{
     }
 
 }
-module.exports= {
-    
-   formatMessage
-
-
-}
+module.exports = formatMessage
