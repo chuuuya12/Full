@@ -61,13 +61,14 @@ function outputMessage(message) {
   p.classList.add('meta');
   p.innerText = message.username;
   p.style=`color: ${message.ucolor}`
-  p.innerHTML += `<span> ${message.time}</span>`;
+  p.innerHTML += `<span> ${message.createdAt}</span>`;
   div.appendChild(p);
   const para = document.createElement('p');
   para.classList.add('text');
   para.innerText = message.text;
   div.appendChild(para);
   document.querySelector('.chat-messages').appendChild(div);
+  createdAt: moment(message.createdAt).format('h:mm a')
 }
 
 // Add room name to DOM
