@@ -1,9 +1,10 @@
 const generateMessage= (username,msg)=>{
 
     return {
-    username,
-    text: msg,
-    createdAt: new Date().getTime()
+        username,
+        ucolor,
+        text,
+        time: new Date().getTime()
     }
 
 }
