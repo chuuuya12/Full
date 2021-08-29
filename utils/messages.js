@@ -1,13 +1,12 @@
-const formatMessage= (username,msg)=>{
+  
+const formatMessage= (username,ucolor, text)=>{
 
     return {
         username,
         ucolor,
         text,
-    createdAt: new Date().getTime().format('h:mm:a')
+    time: new Date().getTime()
     }
 
 }
-
-
 module.exports = formatMessage
