@@ -7,7 +7,7 @@ function formatMessage(username,ucolor, text) {
         username,
         ucolor,
         text,
-        time: new Date().getTime()
+        time: new Date().getTime('h:mm:a')
     }
 }
 
