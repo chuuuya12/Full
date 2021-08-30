@@ -5,6 +5,7 @@ const userList = document.getElementById('users');
 
 
 
+
 // Get username and room from URL
 const { username, room ,ucolor} = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
@@ -61,14 +62,13 @@ function outputMessage(message) {
   p.classList.add('meta');
   p.innerText = message.username;
   p.style=`color: ${message.ucolor}`
-  p.innerHTML += `<span> ${message.createdAt}</span>`;
+  p.innerHTML += `<span> ${message.time}</span>`;
   div.appendChild(p);
   const para = document.createElement('p');
   para.classList.add('text');
   para.innerText = message.text;
   div.appendChild(para);
   document.querySelector('.chat-messages').appendChild(div);
-  
 }
 
 // Add room name to DOM
