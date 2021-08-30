@@ -1,4 +1,4 @@
-const room = [];
+const roomList = [];
 const roomList = document.getElementById('room_list');
 
 function roomList(room) {
