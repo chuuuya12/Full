@@ -2,6 +2,7 @@ const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
+const list = document.getElementById('room_list');
 
 
 
@@ -17,6 +18,7 @@ const socket = io('https://chatnonymous-bot-deploy.herokuapp.com/');
 
 // Join chatroom
 socket.emit('joinRoom', { username, room,ucolor });
+socket.emit('joinRoom', { list });
 
 // Get room and users
 socket.on('roomUsers', ({ room, users }) => {
@@ -85,6 +87,19 @@ function outputUsers(users) {
     userList.appendChild(li);
   });
 }
+socket.on('roomUsers', ({ list }) => {
+    outputList(list)
+  });
+
+  function outputRoomName(room) {
+    list.innerHtml = '';
+    room.forEach((room) =>{
+      const lo = document.createElement('li')
+      lo.innterText = room.room;
+      list.appendChild(li);
+    })
+  }
+
 
 //Prompt the user before leave chat room
 document.getElementById('leave-btn').addEventListener('click', () => {
