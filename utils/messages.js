@@ -3,7 +3,7 @@ const generateMessage= (username,ucolor, text)=>{
     return {
     username,
     ucolor,
-    text: msg,
+    text,
     createdAt: new Date().getTime()
     }
 
