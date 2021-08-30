@@ -1,5 +1,5 @@
-const roomList = [];
-const roomList = document.getElementById('room_list');
+const rooml = [];
+const rooml = document.getElementById('room_list');
 socket.emit('joinRoom', { room });
 socket.on('roomUsers', ({ room, users }) => {
     outputRoomList(list)
