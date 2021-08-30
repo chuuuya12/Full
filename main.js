@@ -1,3 +1,4 @@
+const socket = io()
 const list = [];
 const list = document.getElementById('room_list');
 socket.emit('joinRoom', { list });
