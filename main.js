@@ -1,10 +1,19 @@
-const rooml = [];
-const rooml = document.getElementById('room_list');
-socket.emit('joinRoom', { room });
-socket.on('roomUsers', ({ room, users }) => {
-    outputRoomList(list)
+const list = [];
+const list = document.getElementById('room_list');
+socket.emit('joinRoom', { list });
+socket.on('roomUsers', ({ list }) => {
+    outputList(list)
   });
 
-function outputRoomList(room) {
-    roomList.innerText = room;
+function outputList(room) {
+    list.innerText = room;
+  }
+
+  function outputList(list) {
+    outputList.innerHTML = '';
+    room.forEach((list) => {
+      const li = document.createElement('li');
+      li.innerText = room.list;
+      List.appendChild(li);
+    });
   }
