@@ -2,8 +2,9 @@ const path = require('path');
 const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
-const { createClient } = require('redis');
-const redisAdapter = require('@socket.io/redis-adapter');
+const { Server } = require("socket.io");
+const { createAdapter } = require("@socket.io/redis-adapter");
+const { createClient } = require("redis");
 const formatMessage = require('./utils/messages');
 const {
   userJoin,
@@ -11,7 +12,7 @@ const {
   userLeave,
   getRoomUsers
 } = require('./utils/users');
-
+const io = new Server();
 
 const app = express();
 const server = http.createServer(app);
