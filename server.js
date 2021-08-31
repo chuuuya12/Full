@@ -2,8 +2,8 @@ const path = require('path');
 const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
-const { createAdapter } = require("@socket.io/redis-adapter");
-const { createClient } = require("redis");
+const { createClient } = require('redis');
+const redisAdapter = require('@socket.io/redis-adapter');
 const formatMessage = require('./utils/messages');
 const {
   userJoin,
