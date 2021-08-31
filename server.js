@@ -75,10 +75,6 @@ io.on('connection', socket => {
       });
     }
   });
-  io.to(list.room).emit('outputList', {
-    list: list.room,
-    list: outputList(list.room) 
-  })
 });
 
 const INDEX = '/chat.html';
