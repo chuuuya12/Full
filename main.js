@@ -1,4 +1,15 @@
-const list = document.getElementById('room_list');
+const express = require('express');
+
+module.exports = function(io) {
+    let router = express.Router()
+
+    // define routes
+    // io is available in this scope
+    router.get('...')
+
+    return router;
+}
+const list = document.getElementById('listroom');
 socket.emit('joinRoom', { listR });
 socket.on('list', ({ list }) => {
     outputList(list)
@@ -12,4 +23,5 @@ socket.on('list', ({ list }) => {
       list.appendChild(li);
     })
   }
+
 
