@@ -19,7 +19,6 @@ const io = socketio(server);
 
 // Set static folder
 app.use(express.static(path.join(__dirname)));
-app.use(require("./main")(io));
 
 const botName = 'Chat Bot';
 
